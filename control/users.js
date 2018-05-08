@@ -397,67 +397,6 @@ function getPageData(req, res){
         });
 }
 
-function addBannermain(req, res, folder){
-    
-    console.log("Check in addDetail");
-    var cat = req.body["cat"];
-    var token = req.body["token"];
-    if(!token){
-        res.end("invalid");
-        return;
-    }
-    console.log(cat+"is cat")
-    console.log(token+"is token")
-    
-    switch(cat){
-        case "Gallery" :
-            
-            var newPathFile = "./uploads/banner/" ;
-            var oldPathFile = './uploads/banner/';
-
-            if(!fs.existsSync(newPathFile)){
-              console.log("don't have floder");
-                fs.mkdirSync(newPathFile);
-            }
-            else {
-              console.log("Have floder");
-            }
-             var id = 1;
-            console.log(id+"is id");
-            var type = "IMAGE";
-   
-            console.log(req.file+"req-file");
-            console.log(req.file.filename+"filename-name")
-            fs.createReadStream(oldPathFile + req.file.filename).pipe(fs.createWriteStream(req.file.filename));
-            user_backend.AddBanner([type,req.file.filename,id]
-                 ,function (err){
-                    console.log("Error 2");
-                    res.redirect("/banner#?id=" + id + "&err=['"+err+"']");
-                },
-                function (result){
-                    console.log("ggggggg");
-
-                            res.redirect("/banner#?id=" + id);
-                });
-                        
-            break;
-   
-           
-
-    }
-}
-                    
-function removeBannermain(req, res){
-   
-  
-    user_backend.RemoveBanner(type, id, 
-        function(result){
-            res.redirect("/banner#?id="+tid);
-        }, function(err){
-            res.redirect("/banner#?id="+tid+"&err="+err);
-        });
-                                   
-}
 
 function getUserfogotpassword(req, res){
     user_backend.GetUserfogotpassword(req,
@@ -519,8 +458,6 @@ module.exports = {
     Getuserbyid : getuserbyid,
     Edituser : edituser,
     GetPageData : getPageData,
-    AddBannermain : addBannermain,
-    RemoveBannermain : removeBannermain,
     GetUserfogotpassword : getUserfogotpassword,
     ChangeUserfogotpassword : changeUserfogotpassword
 }
