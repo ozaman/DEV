@@ -1,0 +1,75 @@
+name
+Similan Island One Day Trip
+
+dis
+Similan island a second most beatiful island in the world.Thailand and are composed of nine granite islands washed by a clear blue tropical ocean and blessed with some of the world’s finest beaches.
+
+class
+Standard Class
+
+detail
+“Similan” is derived from the Malay sembilan, and means “nine”. Each of the Similan Islands has a number as well as a name. These are, running from north to south: Koh Ba Ngu (No. 9), Similan (No. 8), Payu (No. 7), Miang (No. 4, No. 5 and, in some opinion, No. 6), Payan (No. 3), Payang (No. 2), and Hu Yong (No. 1). Hin Pousar, or “Elephant Head Rock”, is alternatively designated No. 6 by some. Koh Bon, lying 17 nautical miles north of Ba Ngu, is part of the Similan National Park and may be granted honorary status as No. 10.
+
+program
+06.30 am Pick up from hotel. Transfer to Sarasin pier at Thanoon Seafood.
+
+07.30 am Welcome to Sarasin pier. Enjoy coffee and tea.
+
+09:20 am Deparure from Sarain pier at Thanoon Seafood.
+
+10.00 am Arrive Koh 9 (Ba Ngu) Snorking and Sightseeing.
+
+11.00 am Enjoy your lunch Buffet at Koh 8 and Explore climbing to Sail Rock.
+
+01.00 pm Relex on amazing beach at Koh 4 (Miang Island)
+
+02.20 pm Arrive Koh 5 or Koh 6. Emjoy Snokerling and Swimming.
+
+03.30 pm Return to Sarasin pier at Thanoon Seafood.
+
+condition
+- Additional Charge : for fin 150/person ( If fin or snorkel damage of lost THB 1,500 /set will be charged )
+
+
+include
+-	Transfer Round trip from hotel to Sarasin pier 
+
+-	Season Fruit 
+
+-	Coffee, Tea, Soft Drink and Drinking water
+
+-	Insurance
+
+-	Experience Guide 
+
+-	Life jacket
+
+-	Snorkeling 
+
+
+contact person
+- Khun Ah 081-5696777
+
+note
+- Prices do not include value added tax.
+
+
+2400 2200
+
+CREATE TABLE `ir_tour` (
+  `id` int(7) NOT NULL auto_increment,
+  `name` varchar(200) collate utf8_unicode_ci NOT NULL,
+  `detail` varchar(3000) collate utf8_unicode_ci NOT NULL,
+  `program` varchar(3000) collate utf8_unicode_ci NOT NULL,
+  `condition` varchar(2000) collate utf8_unicode_ci NOT NULL,
+  `include` varchar(1000) collate utf8_unicode_ci NOT NULL,
+  `contact` varchar(500) collate utf8_unicode_ci NOT NULL,
+  `class` varchar(100) collate utf8_unicode_ci NOT NULL,
+  `description` varchar(500) collate utf8_unicode_ci NOT NULL,
+  `company_id` int(8) NOT NULL,
+  `note` varchar(1000) collate utf8_unicode_ci NOT NULL,
+  `recommend` varchar(1000) collate utf8_unicode_ci NOT NULL,
+  `icon` varchar(100) collate utf8_unicode_ci NOT NULL,
+  `city` varchar(100) collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;

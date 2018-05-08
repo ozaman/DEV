@@ -1,0 +1,30 @@
+.breadcrumb a {
+    color: #000000;
+    padding: 0.5rem;
+    -webkit-transition: all 1s;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+.sidebar .nav li > a, .off-canvas-sidebar .nav li > a {
+    
+       padding: 8px;
+    margin: 0 15px;
+}
+.breadcrumb {
+  
+    margin-bottom: 0;
+}
+/*.dropdown-menu:after, .dropdown-menu-container:after {
+    border-bottom: 11px solid #FFFFFF;
+    border-left: 11px solid rgba(0,0,0,0);
+    border-right: 11px solid rgba(0,0,0,0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: -10px;
+}*/
+#login-down  i{
+        color: #999;
+    margin-right: 10px;
+}
